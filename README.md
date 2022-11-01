@@ -5,4 +5,4 @@
 - [Yaryna Fialko](https://github.com/YarynaFialko)
 - [Sofiia Folvarochna](https://github.com/sofiiafolv)
 ## Mentor:
-- Shcherbyna Mykola Yuriiovych
+- Mykola Shcherbyna
