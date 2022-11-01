@@ -4,5 +4,5 @@
 - [Yaroslav Klym](https://github.com/KOlegaBB)
 - [Yaryna Fialko](https://github.com/YarynaFialko)
 - [Sofiia Folvarochna](https://github.com/sofiiafolv)
-##Mentor:
+## Mentor:
 - Shcherbyna Mykola Yuriiovych
