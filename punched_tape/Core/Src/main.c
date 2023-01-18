@@ -128,7 +128,6 @@ int main(void)
   MX_USB_HOST_Init();
   /* USER CODE BEGIN 2 */
   initialise_monitor_handles();
-  printf("Semihosting test...\n\r");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -151,10 +150,8 @@ int main(void)
        			states[i] = 0;
        		}
        	}
-       	printf("%i%i%i%i%i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
-     	fprintf(file_path, "%i%i%i%i%i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
-     	fflush(file_path);
-     	fclose(file_path);
+       	printf("%i%i%i %i %i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
+
      	file_path = fopen("C:\\Users\\klyms\\punched_type\\line_1.txt", "a");
      	 if (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_10) == GPIO_PIN_SET ){
      	   		for (int i = 0; i < 6; ++i){
@@ -164,9 +161,13 @@ int main(void)
      	   				states[i] = 0;
      	    		}
      	    	}
-     	     	printf("%i%i%i%i%i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
-     	  		while( HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_10) == GPIO_PIN_SET ){
-     	  		}
+     	     	printf("%i%i%i %i %i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
+		fprintf(file_path, "%i%i%i %i %i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
+		fflush(file_path);
+		fclose(file_path);
+		file_path = fopen("D:\\text1.txt", "a");
+		while( HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_10) == GPIO_PIN_SET ){
+		}
      	 }
 }
 
