@@ -134,7 +134,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     int states[] = {0, 0, 0, 0, 0, 0};
     uint16_t pins[] = {GPIO_PIN_7, GPIO_PIN_8, GPIO_PIN_9, GPIO_PIN_10, GPIO_PIN_11, GPIO_PIN_12};
-    FILE* file_path = fopen("C:\\Users\\klyms\\punched_type\\line_1.txt", "w");
+    FILE* file_path = fopen("D:\\text1.txt", "w");
     while (1)
     {
 
@@ -152,14 +152,14 @@ int main(void)
        	}
        	printf("%i%i%i %i %i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
 
-     	file_path = fopen("C:\\Users\\klyms\\punched_type\\line_1.txt", "a");
      	 if (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_10) == GPIO_PIN_SET ){
-     	   		for (int i = 0; i < 6; ++i){
-     	   			if (HAL_GPIO_ReadPin(GPIOE, pins[i]) == GPIO_PIN_SET){
-     	   					states[i] = 1;
-     	   			} else{
-     	   				states[i] = 0;
-     	    		}
+		 HAL_Delay(300);
+		for (int i = 0; i < 6; ++i){
+			if (HAL_GPIO_ReadPin(GPIOE, pins[i]) == GPIO_PIN_SET){
+					states[i] = 1;
+			} else{
+				states[i] = 0;
+			}
      	    	}
      	     	printf("%i%i%i %i %i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
 		fprintf(file_path, "%i%i%i %i %i%i\r\n", states[0], states[1], states[2], states[3], states[4], states[5]);
