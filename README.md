@@ -6,3 +6,5 @@
 - [Sofiia Folvarochna](https://github.com/sofiiafolv)
 ## Mentor:
 - Mykola Shcherbyna
+### Scheme:
+![image](https://user-images.githubusercontent.com/92806105/213136760-0ecb8633-b41a-401e-b63d-812dab815123.png)
